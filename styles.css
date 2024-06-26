@@ -1,0 +1,146 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position: relative; /* Garante que o título seja exibido corretamente */
+}
+
+.cell:hover::after {
+  content: attr(title); /* Exibe o título ao passar o mouse sobre a célula */
+  position: absolute;
+  bottom: -20px; /* Posição do título em relação à célula */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333; /* Cor de fundo do título */
+  color: #fff; /* Cor do texto do título */
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap; /* Evita quebrar o título em várias linhas */
+  opacity: 0.9; /* Opacidade do título */
+  z-index: 1; /* Garante que o título esteja acima das células */
+}
+
+.cell.player1 {
+  background-color: #ff9999;
+}
+
+.cell.player2 {
+  background-color: #9999ff;
+}
+/* styles.css */
+
+.special-cell {
+  position: relative;
+  font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+  color: red; /* Cor do número de casas de volta */
+}
+
+.special-cell::after {
+  content: "";
+}
+
+#player-info {
+  margin-top: 20px;
+}
+
+#answer {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+  width: 100px;
+}
+
+#submit-answer {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#dice-container {
+  margin-top: 20px;
+}
+
+#dice {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.dot[data-dot="1"] {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dot[data-dot="2"] {
+  top: 25%;
+  left: 25%;
+}
+.dot[data-dot="3"] {
+  top: 25%;
+  left: 75%;
+}
+.dot[data-dot="4"] {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dot[data-dot="5"] {
+  top: 75%;
+  left: 25%;
+}
+.dot[data-dot="6"] {
+  top: 75%;
+  left: 75%;
+}
+.dot[data-dot="7"] {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}

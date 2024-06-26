@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tabuleiro Matemático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Tabuleiro Matemático</h1>
+        <div id="board">
+            <!-- Tabuleiro será gerado dinamicamente -->
+        </div>
+        <div id="player-info">
+            <p id="current-player">Jogador Atual: 1</p>
+            <p id="question"></p>
+            <input type="number" id="answer" placeholder="Sua resposta">
+            <button id="submit-answer">Enviar Resposta</button>
+        </div>
+        
+        <div id="dice-container" class="hidden">
+            <div id="dice">
+                <div class="dot" data-dot="1"></div>
+                <div class="dot" data-dot="2"></div>
+                <div class="dot" data-dot="3"></div>
+                <div class="dot" data-dot="4"></div>
+                <div class="dot" data-dot="5"></div>
+                <div class="dot" data-dot="6"></div>
+                <div class="dot" data-dot="7"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>''
+</body>
+</html>
