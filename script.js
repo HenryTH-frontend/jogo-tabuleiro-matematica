@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateBoard() {
         const boardNames = [
             "EUA", "Brasil", "Portugal", "França", "Afeganistão",
-            "Chile", "china", "japão", "Canadá", "México",
-            "Argentina", "Inglaterra", "Coréia-Sul", "Coréia-Norte", "Avenida 15",
-            "Avenida 16", "Avenida 17", "Avenida 18", "Avenida 19", "Avenida 20",
-            "Avenida 21", "Avenida 22", "Avenida 23", "Avenida 24", "Avenida 25"
+            "Chile", "China", "Japão", "Canadá", "México",
+            "Argentina", "Inglaterra", "Coreia do Sul", "Coreia do Norte", "Austrália",
+            "Índia", "Itália", "Espanha", "Rússia", "Alemanha",
+            "Holanda", "Suíça", "Suécia", "Noruega", "Finlândia"
         ];
     
         for (let i = 0; i < boardSize; i++) {
@@ -89,24 +89,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 question = `${num1} - ${num2}`;
                 answer = num1 - num2;
                 break;
-            case 2: // Multiplication
-                num1 = Math.floor(Math.random() * 5) + 1; // Limiting for board size
-                num2 = Math.floor(Math.random() * 5) + 1;
-                question = `${num1} * ${num2}`;
+            case 2: // Multiplicação
+                num1 = Math.floor(Math.random() * 10) + 1; // Base
+                num2 = Math.floor(Math.random() * 10) + 1; // Fator
+                question = `${num1} × ${num2}`;
                 answer = num1 * num2;
                 break;
-            case 3: // Division
-                num2 = Math.floor(Math.random() * 5) + 1; // Limiting for board size
-                num1 = num2 * (Math.floor(Math.random() * 5) + 1); // Ensure exact division
-                question = `${num1} / ${num2}`;
+            
+            case 3: // Divisão
+                num2 = Math.floor(Math.random() * 5) + 1; // Divisor (1 a 5)
+                num1 = num2 * (Math.floor(Math.random() * 10) + 1); // Dividendo (múltiplo do divisor)
+                question = `${num1} ÷ ${num2}`;
                 answer = num1 / num2;
                 break;
-            case 4: // Exponentiation (Power)
-                num1 = Math.floor(Math.random() * 4) + 1; // Base
-                num2 = Math.floor(Math.random() * 3) + 2; // Exponent (start from 2)
+            
+            case 4: // Exponenciação
+                num1 = Math.floor(Math.random() * 5) + 1; // Base (1 a 5)
+                num2 = Math.floor(Math.random() * 3) + 2; // Expoente (2 a 4)
                 question = `${num1} ^ ${num2}`;
                 answer = Math.pow(num1, num2);
                 break;
+            
             case 5: // Radication (Square Root)
                 do {
                     num1 = Math.floor(Math.random() * 25) + 1; // Limiting for board size
