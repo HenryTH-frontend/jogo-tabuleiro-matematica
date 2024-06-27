@@ -6,92 +6,107 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: #282a36; /* Dracula theme background color */
+  color: #f8f8f2; /* Dracula theme text color */
 }
 
 .container {
   text-align: center;
+  max-width: 1000px; /* Define a largura máxima para o conteúdo */
+  width: 90%; /* Define a largura do conteúdo em percentual */
+  padding: 20px;
+  margin: auto; /* Centraliza o conteúdo na página */
 }
 
 #board {
   display: grid;
-  grid-template-columns: repeat(5, 80px);
+  grid-template-columns: repeat(5, 1fr); /* Utiliza frações de largura igual para as colunas */
   gap: 10px;
   margin: 20px auto;
 }
 
 .cell {
-  width: 80px;
+  width: 100%; /* Largura total para ocupar o espaço da célula */
   height: 80px;
-  background-color: #ffffff;
-  border: 2px solid #000;
+  background-color: #44475a; /* Dracula theme cell background color */
+  border: 2px solid #6272a4; /* Dracula theme cell border color */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  position: relative; /* Garante que o título seja exibido corretamente */
+  font-size: 16px;
+  color: #f8f8f2; /* Dracula theme text color */
+  position: relative;
 }
 
+/* Responsividade para o hover */
 .cell:hover::after {
-  content: attr(title); /* Exibe o título ao passar o mouse sobre a célula */
+  content: attr(title);
   position: absolute;
-  bottom: -20px; /* Posição do título em relação à célula */
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333; /* Cor de fundo do título */
-  color: #fff; /* Cor do texto do título */
+  background-color: #44475a;
+  color: #f8f8f2;
   padding: 5px;
   border-radius: 5px;
-  white-space: nowrap; /* Evita quebrar o título em várias linhas */
-  opacity: 0.9; /* Opacidade do título */
-  z-index: 1; /* Garante que o título esteja acima das células */
+  white-space: nowrap;
+  opacity: 0.9;
+  z-index: 1;
 }
 
 .cell.player1 {
-  background-color: #ff9999;
+  background-color: #ff5555; /* Dracula theme player 1 color */
 }
 
 .cell.player2 {
-  background-color: #9999ff;
+  background-color: #bd93f9; /* Dracula theme player 2 color */
 }
-/* styles.css */
 
 .special-cell {
   position: relative;
-  font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
-  color: red; /* Cor do número de casas de volta */
-}
-
-.special-cell::after {
-  content: "";
+  font-size: 14px;
+  color: #ff79c6; /* Dracula theme special cell color */
 }
 
 #player-info {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #answer {
   margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
-  width: 100px;
+  width: 100%;
+  max-width: 200px; /* Limita a largura máxima do campo de resposta */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 #submit-answer {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
+  background-color: #50fa7b; /* Dracula theme button color */
+  color: #282a36;
+  border: none;
+  border-radius: 5px;
+  width: 100%; /* Botão ocupa a largura total */
+  max-width: 200px; /* Limita a largura máxima do botão */
 }
 
 #dice-container {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 #dice {
   width: 60px;
   height: 60px;
-  border: 2px solid #000;
+  border: 2px solid #6272a4; /* Dracula theme dice border color */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -103,44 +118,20 @@ body {
 .dot {
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: #f8f8f2;
   border-radius: 50%;
   position: absolute;
   opacity: 0;
 }
 
-.dot[data-dot="1"] {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.dot[data-dot="2"] {
-  top: 25%;
-  left: 25%;
-}
-.dot[data-dot="3"] {
-  top: 25%;
-  left: 75%;
-}
-.dot[data-dot="4"] {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.dot[data-dot="5"] {
-  top: 75%;
-  left: 25%;
-}
-.dot[data-dot="6"] {
-  top: 75%;
-  left: 75%;
-}
-.dot[data-dot="7"] {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .hidden {
   display: none;
 }
+
+.dot[data-dot="1"] { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.dot[data-dot="2"] { top: 25%; left: 25%; }
+.dot[data-dot="3"] { top: 25%; left: 75%; }
+.dot[data-dot="4"] { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.dot[data-dot="5"] { top: 75%; left: 25%; }
+.dot[data-dot="6"] { top: 75%; left: 75%; }
+.dot[data-dot="7"] { top: 50%; left: 50%; transform: translate(-50%, -50%); }
