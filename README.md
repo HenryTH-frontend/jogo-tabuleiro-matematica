@@ -44,3 +44,11 @@ Um trabalho de estudos de Geo-Matemática!!
 <div style="flex-basis: 48%;" align="center">
   <img src="https://33.media.tumblr.com/e85d3e398ccf035c0d5dd74a34d57eb9/tumblr_ngbasnF0bG1qze3hdo1_r3_500.gif"  style="border-radius: 15px;">
 </div>
+
+<!--Link do Jogo-->
+<details align="center">
+  <summary>Link do Jogo</summary>
+    <div>
+      https://henryth-frontend.github.io/jogo-tabuleiro-matematica/
+    </div>
+</details>
