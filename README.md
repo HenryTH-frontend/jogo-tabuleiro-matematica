@@ -44,7 +44,7 @@ Um trabalho de estudos de Geo-Matemática!!
 <div style="flex-basis: 48%;" align="center">
   <img src="https://33.media.tumblr.com/e85d3e398ccf035c0d5dd74a34d57eb9/tumblr_ngbasnF0bG1qze3hdo1_r3_500.gif"  style="border-radius: 15px;">
 </div>
-
+<br>
 <!--Link do Jogo-->
 <details align="center">
   <summary>Link do Jogo</summary>
@@ -52,3 +52,9 @@ Um trabalho de estudos de Geo-Matemática!!
       https://henryth-frontend.github.io/jogo-tabuleiro-matematica/
     </div>
 </details>
+<br>
+
+<!--Relaxing Image-->
+<div style="flex-basis: 48%;" align="center" width="800" height="800">
+  <img src="https://i.pinimg.com/originals/80/6e/de/806ede5583f088c6bdb788bf867f8064.gif">
+</div>
