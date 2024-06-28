@@ -58,3 +58,26 @@ Um trabalho de estudos de Geo-Matemática!!
 <div style="flex-basis: 48%;" align="center" width="800" height="800">
   <img src="https://i.pinimg.com/originals/80/6e/de/806ede5583f088c6bdb788bf867f8064.gif">
 </div>
+<br>
+<hr>
+
+<!--Como jogar-->
+<details align="center">
+  <summary>## Como jogar</summary>
+    <div>
+       <ul> 
+         <br>
+         <br>
+         <br>
+           <li>- O jogo  é multiplayer, o seja, precisa de dois jogadores, chame um amigo e venha jogar!</li>
+           <li>- Para jogar, primeiro resolva a conta matemática que lhe foi fornecida</li>
+           <li>- O jogador anda casas somente se acerta a conta</li>   
+           <li>- Se um jogador erra ele passa a vez para o próximo jogador</li>
+           <li>- No jogo há casas "especiais", nestas casas, se o jogador acabar caindo ele volta uma quantidade de casas paara trás!</li>   
+           <li>- O jogador ganha quando chega primeiro na ultima casa</li>
+       </ul>
+    </div>
+</details>
+ <br>
+ <hr>
+  <br>
